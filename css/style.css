@@ -59,7 +59,32 @@ h1{
     transform: rotateY(180deg);
 }
 
-
 .card.flip{
     transform: rotateY(180deg);
+}
+
+.endgame{
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 120px;
+    left: 50%;
+    color: white;
+    font-size: 2em;
+    margin-left: -100px;
+    background-color: black;
+    text-align: center;
+}
+
+.replay{
+    width:80px;
+    height: 20px;
+    position: absolute;
+    top: 750px;
+    left: 50%;
+    margin: 0px 0 10px -50px;
+    color: white;
+    font-size: 14px;
+    background-color: black;
+    text-align: center;
 }
