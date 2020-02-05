@@ -84,6 +84,15 @@ function shuffleCard(){
   });
 }
 
+function unFlipAllCard(){
+  for(let i = 0; i< cards.length; i++){
+    if(cards[i].classList.contains('flip')){
+      cards[i].classList.remove('flip');
+      cards[i].addEventListener('click',flipCard);
+    }
+  }
+}
+
 function flipAllCard(){
   cards.forEach(card => {card.classList.add('flip')})
   setTimeout(() => {cards.forEach(card => {card.classList.remove('flip')})}, 1000);
@@ -91,15 +100,12 @@ function flipAllCard(){
 
 function startGame(){
   document.querySelector(".endgame").style.display = "none";
-  for(let i = 0; i< cards.length; i++){
-    if(cards[i].classList.contains('flip')){
-      cards[i].classList.remove('flip');
-    }
-  }
-  reset();
+  unFlipAllCard();
+  setTimeout(() =>{reset();
   numCardFlip = 0;
   shuffleCard();
-  flipAllCard();
+  flipAllCard();},1000);
+  
 }
 
 shuffleCard();
