@@ -3,6 +3,8 @@ let hasCardFlipped = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let numCardFlip = 0;
+let numOfCard = cards.length;
+
 function flipCard() {
   this.classList.add('flip');
   if(lockBoard) 
@@ -61,7 +63,7 @@ function reset(){
 }
 
 function checkforEndGame(){
-  let endGame = numCardFlip == cards.length;
+  let endGame = numCardFlip == numOfCard;
   if(endGame){
     showEndScene();
   }
@@ -77,7 +79,7 @@ function showEndScene(){
 
 function shuffleCard(){
   cards.forEach(card => {
-    let ramdomPos = Math.floor(Math.random() * 12);
+    let ramdomPos = Math.floor(Math.random() * numOfCard);
     card.style.order = ramdomPos;
   });
 }

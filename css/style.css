@@ -14,8 +14,8 @@ body{
 }
 
 .board{
-    width: 720px;
-    height: calc(630+ 50) px;
+    width: 900px;
+    height: calc(180*5+ 45) px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +24,7 @@ body{
 
 h1{
     width: 100%;
-    line-height: 50px;
+    line-height: 45px;
     font-size: 30px;
     text-align: center;
     font-family: 'Bungee Shade', cursive;
@@ -32,8 +32,8 @@ h1{
 }
 .card{
     width: 170px;
-    height: 200px;
-    margin: 5px;
+    height: 170px;
+    margin: 4px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     border-radius: 5px;
@@ -80,9 +80,9 @@ h1{
     width:80px;
     height: 20px;
     position: absolute;
-    top: 750px;
-    left: 50%;
-    margin: 0px 0 10px -50px;
+    top: 0px;
+    left: 0px;
+    margin: 10px 0 10px 10px;
     color: white;
     font-size: 14px;
     background-color: black;
